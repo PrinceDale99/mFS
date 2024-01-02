@@ -187,7 +187,7 @@ h1 {
     </ul>
 
         <label for="pickupTime">Pick-up Time:</label>
-        <input type="date" id="date" name="date" min="" required>
+        <input type="datetime-local" id="pickupTime" name="pickupTime" min="" required>
 
         <br>
         <button type="button" onclick="calculateTotal()">Calculate Total</button>
@@ -249,7 +249,6 @@ background-color: #111111;
     <p><strong>Name:</strong> <span id="confName"></span></p>
 
     <p><strong>Phone:</strong> <span id="confPhone"></span></p>
-    <p><strong>Address:</strong> <span id="confAddress"></span></p>
     <p><strong>Selected Foods:</strong> <span id="confFoods"></span></p>
     <p><strong>Total Amount:</strong> <span id="confTotal"></span></p>
     <p><strong>Pick-up Time:</strong> <span id="confDate"></span></p>
@@ -262,12 +261,12 @@ background-color: #111111;
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-      // Get today's date in the format YYYY-MM-DD
-      const today = new Date().toISOString().split('T')[0];
+    var now = new Date();
+    var minDate = now.toISOString().split('T')[0];
+    var minTime = now.toTimeString().split(' ')[0];
+    document.getElementById('pickupTime').min = minDate + 'T' + minTime;
+});
 
-      // Set the minimum date for the input field to today
-      document.getElementById('date').min = today;
-    });
 
     
     function calculateTotal() {
@@ -295,14 +294,16 @@ background-color: #111111;
             // Gather user information
             var name = document.getElementById('name').value;
 var phone = document.getElementById('phone').value;
-var pickupTime = document.getElementById('date').value;
+var pickupTime = document.getElementById('pickupTime').value;
             var foods = getSelectedFoods();
             var totalAmount = document.getElementById('totalPrice').innerText;
+
+            var pickupTimeFormatted = formatPickupTime(pickupTime);
 
             // Display confirmation information
             document.getElementById('confName').innerText = name;
             document.getElementById('confPhone').innerText = phone;
-            document.getElementById('confDate').innerText = pickupTime;
+            document.getElementById('confDate').innerText = pickupTimeFormatted;
             document.getElementById('confFoods').innerText = foods;
             document.getElementById('confTotal').innerText = totalAmount;
 
@@ -333,6 +334,12 @@ var pickupTime = document.getElementById('date').value;
             document.getElementById('confirmOrderBtn').style.display = 'none';
             document.getElementById('orderConfirmationMsg').style.display = 'block';
         }
+
+        function formatPickupTime(pickupTimeRaw) {
+    var dateObj = new Date(pickupTimeRaw);
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+    return dateObj.toLocaleString('en-US', options);
+}
 </script>
 </body>
 </html>
