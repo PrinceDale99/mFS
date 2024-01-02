@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="proj_forms3.css">
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <p>Thank you for your order, <span id="confirmName"></span>!</p>
+    <p>Here's a summary of your order:</p>
+    <ul>
+        <li>Name: <span id="confirmName"></span></li>
+        <li>Address: <span id="confirmAddress"></span></li>
+        <li>Phone: <span id="confirmPhone"></span></li>
+        <li>Items: <span id="confirmSelectedItems"></span></li>
+        <li>Total Price: <span id="confirmTotalPrice"></span></li>
+    </ul>
+
+    <script>
+        // Retrieve data from localStorage
+        var name = localStorage.getItem("name");
+        var address = localStorage.getItem("address");
+        var phone = localStorage.getItem("phone");
+        var selectedItems = JSON.parse(localStorage.getItem("selectedItems"));
+        var totalPrice = localStorage.getItem("totalPrice");
+
+        // Display the data
+        document.getElementById("confirmName").textContent = name;
+        document.getElementById("confirmAddress").textContent = address;
+        document.getElementById("confirmPhone").textContent = phone;
+        document.getElementById("confirmSelectedItems").textContent = selectedItems.join(", ");
+        document.getElementById("confirmTotalPrice").textContent = "₱" + totalPrice.toFixed(2);
+
+        // Clear localStorage after displaying
+        localStorage.clear();
+    </script>
+</body>
+</html>
