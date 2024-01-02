@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Pick-up Form</title>
+    <link rel="stylesheet" href="proj_forms2.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+h1 {
+    Background-color: #ff892b;
+    font-family: 'Lilita One', sans-serif;
+    Color: #111111;
+    align-items: center;
+    text-align: center;
+    
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        form {
+            max-width: 350px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border: 2px solid #ff892b;
+            border-radius: 5px;
+            padding: 8px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .list input [type="checkbox"] {
+            margin-right: 999px;
+        }
+
+        .arrow {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .arrow::before {
+            content: "\25B6";
+            display: inline-block;
+            margin-right: 6px;
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+            color: orange;
+        }
+
+        .open .arrow::before {
+            transform: rotate(90deg);
+        }
+
+        .list {
+            list-style-type: none;
+            padding-left: 20px;
+            max-height: 100px;
+            overflow-y: auto;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .open .list {
+            max-height: 10000px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <h1>PICK UP!</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="product_name">Maharlika Food Street's Menu:</label>
+       <div class="arrow" onclick="toggleList(this)">MFS GRILLED PRODUCTS:</div>
+<ul class="list">
+  <li>
+      <input type="checkbox" id="item1"> <label for="item1"> Whole Classic Grilled Chicken - 390php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item2"> <label for="item2">3pcs.Beef BBQ w/ Rice - 120php </label>
+  </li>
+  <li>
+      <input type="checkbox" id="item2"> <label for="item2">3pcs. Chicken Fillet BBQ w/ Rice - 100php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item3"> <label for="item3">Grilled leg w/ Biryani Rice - 210php</label>
+      </li>
+   <li>
+      <input type="checkbox" id="item4"> <label for="item4">Grilled Pecho w/ Biryani Rice - 220php</label>
+      </li>
+      <li>
+      <input type="checkbox" id="item5"> <label for="item5">Pecho Pak Only - 130php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item6"> <label for="item6">Leg Quarter Only - 115php</label>
+  </li>
+</ul>
+<hr>
+        <div class="arrow" onclick="toggleList(this)">DRINKS: </div>
+    
+    <ul class="list">
+        <li>
+      <input type="checkbox" id="item7"> <label for="item7">Cucumber lemon - 50php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item8"> <label for="item8">Honey Lemon - 50php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item9"> <label for="item9">Iced Coffee Milk - 60php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item10"> <label for="item10">Iced Milo - 60php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item11"> <label for="item11">Oreo Dalgona - 60php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item12"> <label for="item12">Avocado Shake - 60php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item13"> <label for="item13">Mango Shake - 60php</label>
+  </li>
+  <li>
+      <input type="checkbox" id="item14"> <label for="item14">Choco Mousse Special - 100php </label>
+  </li>
+    </ul>  
+    
+    <hr>
+    
+        <div class="arrow" onclick="toggleList(this)">SNACKS: </div>
+    <ul class="list">
+          <li>
+      <input type="checkbox" id="item15"><label for="item15">Ultimate Fries - 70php</label></li>
+        <li>
+      <input type="checkbox" id="item16"><label for="item16">Shawarma Wrap - 75php</label></li>
+        <li>
+      <input type="checkbox" id="item17"> <label for="item17">Siomai (5pcs) - 35php</label></li>
+      <li>
+      <input type="checkbox" id="item18"> <label for="item18">Takoyaki (8pcs) - 120php</label></li>
+      <li>
+      <input type="checkbox" id="item19"> <label for="item19">Shanghai (8pcs) - 70php</label></li>
+      <li>
+      <input type="checkbox" id="item20"> <label for="item20">Nachos - 70php</label></li>
+      
+    </ul>
+
+        <label for="pickupTime">Pick-up Time:</label>
+        <input type="date" id="date" name="date" min="" required>
+        <br>
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+        <!-- Display total price here -->
+        <div id="totalPrice"></div>
+        <br>
+        <button type="submit">Submit Order</button>
+    </form>
+    <script>
+  function toggleList(element) { element.parentNode.classList.toggle('open');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+      // Get today's date in the format YYYY-MM-DD
+      const today = new Date().toISOString().split('T')[0];
+
+      // Set the minimum date for the input field to today
+      document.getElementById('date').min = today;
+    });
+
+    
+    function calculateTotal() {
+            // Get all checkboxes
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            
+            var total = 0;
+            
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
+                    // Get the price associated with the checkbox
+                    var price = parseFloat(checkbox.parentNode.innerText.match(/(\d+(\.\d+)?)/)[0]);
+                    
+                    // Add the price to the total
+                    total += price;
+                }
+            });
+
+            // Display the total
+            document.getElementById('totalPrice').innerText = 'Total Price: $' + total.toFixed(2);
+        }
+</script>
+</body>
+</html>

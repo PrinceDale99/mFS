@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharlika Food Street - Online</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="./assets/js/babel.js" type="text/javascript"></script>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/png">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/terms.css">
+  <link rel="stylesheet" href="./assets/css/deliver.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+
+  <style>
+    .privacy-policy-heading {
+      font-size: 30px; /* Adjust the size as needed */
+    }
+
+    .newsletter-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 50%; /* Adjust the width as needed */
+      max-width: 550px; /* Set a maximum width if desired */
+      align-items: center;
+      text-align: center;
+      margin: 0 auto; /* Center the box horizontally */
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .subscribe-btn {
+      padding: 12px;
+      background-color: #ff6016;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    </style>
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="./index.html" class="logo">
+          <img src="./assets/images/logo.png" width="160" height="50" alt="Maharlika Food street Logo">
+        </a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+      </nav>
+
+      <div class="header-btn-group">
+
+
+        <a href="./index.html"><button class="btn btn-hover">Return Home</button></a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-container>
+
+    <div class="search-box">
+      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+        class="search-input">
+
+      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" style="background-image: url('./STORY/images/ChoosingMaharlikaVillageasthehomebasewasano-brainer.NurizamwantedherjointtobepartofthelocalcommunityandMaharlikaVillageknownforitstight-knitvibewastheperfectfit.3.png')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h2 class="h1 hero-title">Order From Us!
+            </h2>
+
+            <p class="hero-text">We'll deliver it to your place<br>in the right time!</p>
+
+          </div>
+
+    </article>
+    <section class="section section-divider white promo">
+      <div class="container">
+<br><BR>
+  <style>
+  h1, h3, h4, h5, h6 {
+    color: rgb(31, 31, 31);
+    text-align: center;
+}
+
+h2 {
+  color: #ff6016 ;
+}
+
+.box {
+      width: 175px;
+      height: 175px;
+      background-color: #ff891c;
+      color: #fff;
+      text-align: center;
+      line-height: 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; /* Smooth transition for background-color */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Box shadow effect */
+      border-radius: 20PX;
+    }
+
+    /* Style for the hover effect */
+    .box:hover {
+      background-color: #181818;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.10);
+    }
+
+    .box-container {
+      display: flex;
+    }
+
+    .box img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .containigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50vh; /* Optional: set height to viewport height for full-page effect */
+    }
+
+    .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .vignette-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Vignette overlay color */
+            z-index: 999;
+            display: none; /* Initially hidden */
+        }
+
+        .popup-iframe {
+            width: 80%; /* Adjust the width as needed */
+            height: 80%; /* Adjust the height as needed */
+            border: none;
+            z-index: 1000;
+        }
+
+        .popup-close-button {
+    position: absolute; /* Position the button absolutely within its container */
+    top: 10px; /* Customize the top position */
+    right: 10px; /* Customize the right position */
+    width: 50px; /* Set the button width */
+    height: 50px; /* Set the button height */
+    font-size: 50px; /* Adjust the font size of the "X" */
+    cursor: pointer; /* Show a pointer cursor on hover */
+    color: #ff891c;
+    transition: color 0.5s ease;
+}
+
+.popup-close-button:hover {
+    color: #ffffff;
+}
+
+</style>
+<h1 class="privacy-policy-heading">CHOOSE HOW YOU LIKE TO<span style="display: inline; color: #ff6822;"> ORDER!</span></h1>
+<br>
+<div class="containigger">
+<div class="box-container">
+<div class="box" onclick="boxClicked(1)">
+    <img src="./assets/images/preorder.png" alt="PRE-ORDER">
+</div>
+<div class="box" onclick="boxClicked(2)">
+    <img src="./assets/images/pickup.png" alt="PICK-UP">
+</div>
+<div class="box" onclick="boxClicked(3)">
+    <img src="./assets/images/deliver.png" alt="DELIVERY">
+</div>
+<div class="box" onclick="navigateToSection()">
+  <img src="./assets/images/table.png" alt="RESERVE">
+</div>
+</div></div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="vignette-overlay" id="vignetteOverlay"></div>
+
+  <div class="popup-container" id="popupContainer">
+    <iframe src="pickup.html" class="popup-iframe" id="popupIframe"></iframe>
+    <button class="popup-close-button" onclick="closePopup()">&times;</button>
+</div>
+
+<div class="vignette-overlay" id="vignetteOverlay"></div>
+
+
+
+
+
+  
+        
+        <div class="newsletter-box">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Stay updated with our latest offers and latest addition to the Menu!</p>
+          <form class="newsletter-form">
+            <input type="email" class="input-field" placeholder="Your Email Address" required>
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" id="KirkJohnTanMasipag">
+
+    <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="" class="logo">Foodie<span class="span">.</span></a>
+
+          <p class="footer-text">
+            Maharlika Food Street is a Halal restaurant with a 4.9 star rating on Google Maps and 272 reviews on Facebook. 
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/p/Maharlika-Food-Street-100063811609022/" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://maps.app.goo.gl/vd45gYBMf7LB16cQ6" class="social-link">
+                <ion-icon name="logo-google"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://restaurantguru.com/Maharlika-Food-Street-Taguig-2/menu" class="social-link">
+                <ion-icon name="star-half-outline"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://directoryhub.ph/listing/maharlika-food-street" class="social-link">
+                <ion-icon name="location-outline"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Info</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">0929 369 7058</p>
+          </li>
+
+          <li>
+            <address class="footer-list-item">Blk 32 Lot 7 Barracks street, Taguig, 1632 Metro Manila</address>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Monday-Sunday: 12:00-22:00</p>
+          </li>
+
+        </ul>
+
+        <form action="" class="footer-form">
+
+          <p class="footer-list-title">Book a Table</p>
+
+          <div class="input-wrapper">
+
+            <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
+              class="input-field">
+
+            <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
+              class="input-field">
+
+          </div>
+
+          <div class="input-wrapper">
+
+            <select name="total_person" aria-label="Total person" class="input-field">
+              <option value="person">Person</option>
+              <option value="2 person">2 Person</option>
+              <option value="3 person">3 Person</option>
+              <option value="4 person">4 Person</option>
+              <option value="5 person">5 Person</option>
+            </select>
+
+            <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
+
+          </div>
+
+          <textarea name="message" required placeholder="Message" aria-label="Message" class="input-field"></textarea>
+
+          <button type="submit" class="btn">Book a Table</button>
+
+        </form>
+</div>
+      </div>
+    </div>
+
+  </footer>
+  <div style="background-color: #ff6016; display: flex; justify-content: center; align-items: center;">
+    <div class="container">
+      <p style="text-align: center;">
+        <a href="./termsconditions.html" style="font-weight: bold; color: #ffffff; text-decoration: none;">READ OUR TERMS AND CONDITIONS</a>
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/botonscript.js"  type="text/javascript"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+      function navigateToSection() {
+        // Scroll to the target section with smooth scrolling
+        document.getElementById('KirkJohnTanMasipag').scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+
+            // Function to show the popup and vignette
+            function boxClicked(type) {
+            document.getElementById("popupIframe").src = "./popu/" + type + ".html"; // Update iframe source
+            document.getElementById("popupContainer").style.display = "flex"; // Show popup
+            document.getElementById("vignetteOverlay").style.display = "block"; // Show vignette
+        }
+
+        // Function to close the popup and vignette
+        function closePopup() {
+            document.getElementById("popupContainer").style.display = "none"; // Hide popup
+            document.getElementById("vignetteOverlay").style.display = "none"; // Hide vignette
+        }
+
+
+        document.getElementById("submitOrderButton").addEventListener("click", function() {
+    parent.closePopup();
+});
+</script>
+</body>
+
+</html>
